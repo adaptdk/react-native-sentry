@@ -1,9 +1,8 @@
-
 apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion project.hasProperty('compileSdkVersion') ? project.compileSdkVersion : 28
-    buildToolsVersion project.hasProperty('buildToolsVersion') ? project.compileSdkVersion : "28.0.3"
+    buildToolsVersion project.hasProperty('buildToolsVersion') ? project.buildToolsVersion : "28.0.3"
 
     defaultConfig {
         consumerProguardFiles 'proguard-rules.pro'
@@ -11,7 +10,7 @@ android {
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion project.hasProperty('targetSdkVersion') ? project.compileSdkVersion : 28
+        targetSdkVersion project.hasProperty('targetSdkVersion') ? project.targetSdkVersion : 28
         versionCode 1
         versionName "1.0"
         ndk {
